@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Himalayas: beyond the clouds, whispering winds.">
+    <meta name="author" content="Héctor Zayas">
+    <title>Himalayas</title>
+    <link rel="icon" type="image/png" href="https://www.google.com/s2/u/0/favicons?domain=http://hectorzayas.com/
+    ">
+    <link rel="stylesheet" href="./css/compiled_style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav-wrapper" id="navbar">
+        <div class="nav-left">
+            <h1 id="logo">[<span>ᨒ</span>]</h1>
+        </div>
+        <div class="nav-right">
+            <div class="menu-icon" onclick="toggleMenu()">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+        </div>
+        <div id="nav">
+            <div class="strip"></div>
+            <div class="strip"></div>
+            <div class="strip"></div>
+            <div class="strip"></div>
+            <div class="strip"></div>
+            <ul>
+                <li><a href="#home" onclick="hideMenu()">Home</a></li>
+                <li><a href="#about" onclick="hideMenu()">About</a></li>
+                <li><a href="#gallery" onclick="hideMenu()">Gallery</a></li>
+                <li><a href="#blog" onclick="hideMenu()">Blog</a></li>
+                <li><a href="#contact" onclick="hideMenu()">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+
+        <!-- Home Section -->
+        <section id="home">
+            <!-- Video -->
+            <div class="video-container">
+                <video autoplay loop muted>
+                    <source src="assets/video/himalayas.mp4">
+                </video>
+                <!-- Grain Noise -->
+                <div class="noise"></div>
+            </div>
+            <!-- Overlay -->
+            <div class="overlay">
+                <div class="main-title-container">
+                    <h1>Himalayas</h1>
+                    <h1>Himalayas</h1>
+                </div>
+                <div class="subtitle-container">
+                    <p>Beyond the clouds, whispering winds.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <div class="about-container">
+                <div class="text-container">
+                    <h2>About</h2>
+                    <p>
+                        <span class="phrase">The Himalayas rise, majestic and vast.</span>
+                        <span class="phrase"><span class="everest">Mount Everest</span> watches over, a sentinel in the sky.</span>
+                        <span class="phrase">Monasteries cling to cliffs, ancient and serene.</span>
+                        <span class="phrase">Valleys bloom, lush and vibrant beneath.</span>
+                        <span class="phrase">Sunlight kisses the snow-capped peaks, turning them golden.</span>
+                        <span class="phrase">Every view, a glimpse into the mystical.</span>
+                        <span class="phrase">Here, nature’s grandeur is unveiled.</span>
+                        <span class="phrase">The soul finds peace, the spirit freedom.</span>
+                        <span class="phrase">Among these towering giants, awe intertwines with tranquility.</span>
+                        <span class="phrase">A realm where the sublime embraces the heart, inviting it into the infinite dance of beauty and wonder.</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery">
+            <div class="gallery-container">
+
+                <div class="group">
+                    <div class="image-box">
+                        <img src="assets/img/gallery-4.jpg" alt="Temple Mountain View" loading="lazy">
+                    </div>
+                    <div class="text-box">
+                        <h3>Spiritual Nexus</h3>
+                        <p>The Himalayas have long been a center for spiritual practices and pilgrimage. Home to several sacred sites, it attracts monks and devotees who seek enlightenment and solace. Its serene landscapes and secluded monasteries offer a unique blend of natural beauty and spiritual tranquility.</p>
+                    </div>
+                </div>
+
+                <div class="image-box tall">
+                    <img src="assets/img/gallery-2.jpg" alt="Expedition Below Snowy Peak" loading="lazy">
+                </div>
+
+                <div class="group">
+                    <div class="text-box">
+                        <h3>Cultural Mosaic</h3>
+                        <p>This region showcases a rich tapestry of cultures, languages, and traditions. Diverse ethnic groups, each with their own distinct heritage, coexist in the Himalayas. Festivals, music, dance, and art form an integral part of life, reflecting the vibrant and multifaceted cultural identity of the Himalayan people.</p>
+                    </div>
+                    <div class="image-box">
+                        <img src="assets/img/gallery-5.jpg" alt="Festival Colors Over Village" loading="lazy">
+                    </div>
+                </div>
+
+                <div class="image-box tall">
+                    <img src="assets/img/gallery-3.jpg" alt="Historical Town Mountain Backdrop" loading="lazy">
+                </div>
+
+                <div class="group">
+                    <div class="image-box">
+                        <img src="assets/img/gallery-1.jpg" alt="Vibrant Mountain Artwork" loading="lazy">
+                    </div>
+                    <div class="text-box">
+                        <h3>Environmental Sanctuary</h3>
+                        <p>The Himalayas play a crucial role in the environmental health of our planet. They are the source of major rivers, support a wide range of biodiversity, and influence the climate patterns of the region. Conservation efforts aim to protect this fragile ecosystem, ensuring it remains a sanctuary for wildlife and nature enthusiasts.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog">
+            <div class="blog-container">
+                <!-- Article 1 -->
+                <div class="featured-article">
+                    <img src="assets/img/blog-1.avif" alt="Nepal Mountain" loading="lazy">
+                    <h3>The Majestic Ama Dablam: A Jewel of the Himalayas</h3>
+                    <p>Among the many peaks that adorn the Himalayas, Ama Dablam stands out for its unique beauty and challenging terrain...</p>
+                    <a href="articles/article1-TheMajesticAmaDablam.html">Read More</a>
+                </div>
+
+                <!-- Three Smaller Articles -->
+                <div class="smaller-articles">
+
+                    <!-- Article 2 -->
+                    <div class="article">
+                        <img src="assets/img/blog-2.avif" alt="The Himalayas" loading="lazy">
+                        <h3>The Enigmatic Himalayas:</h3>
+                        <p>Amidst the vast expanse of the Earth's geography, the Himalayas stand out as a testament to nature's grandeur and mystique...</p>
+                        <a href="articles/article2-TheEnigmaticHimalayas.html">Read More</a>
+                    </div>
+
+                    <!-- Article 3 -->
+                    <div class="article">
+                        <img src="assets/img/blog-3.avif" alt="Gosainkunda, Nepal" loading="lazy">
+                        <h3>Colors of Gosainkunda:</h3>
+                        <p>A photographic journey through Gosainkunda, Nepal, reveals more than just the icy landscapes of its glacial mountains...</p>
+                        <a href="articles/article3-ColorsOfGosainkunda.html">Read More</a>
+                    </div>
+
+                    <!-- Article 4 -->
+                    <div class="article">
+                        <img src="assets/img/blog-4.avif" alt="Nepal" loading="lazy">
+                        <h3>Vibrant Threads of Nepal:</h3>
+                        <p>In the heart of Nepal, amidst the backdrop of its majestic landscapes...</p>
+                        <a href="articles/article4-VibrantThreadsOfNepal.html">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="contact-container">
+                <h2>Drop us a Message!</h2>
+                <div class="form-container">
+                    <form action="https://formspree.io/f/mzbnannd" method="POST" id="myForm">
+                        <div class="grid-container">
+                            <div class="form-group">
+                                <label for="first-name">First Name *</label>
+                                <input type="text" id="first-name" name="first-name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="last-name">Last Name *</label>
+                                <input type="text" id="last-name" name="last-name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+                        <div class="message">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <small>&copy; 2024 Himalayas</small>
+        <div class="social-icons">
+            <a href="https://twitter.com/hekzayas" target="_blank"><i class="fa-brands fa-x-twitter" title="Instagram"></i></a>
+            <a href="https://www.instagram.com/hekzayas/" target="_blank"><i class="fa-brands fa-instagram" title="X"></i></a>
+            <a href="https://www.linkedin.com/in/hectorzayas/" target="_blank"><i class="fa-brands fa-linkedin-in" title="LinkedIn"></i></a>
+        </div>
+    </footer>
+
+    <!-- Toast -->
+    <div class="toast-container">
+        <div class="toast" id="toast">Your message has been recieved!</div>
+    </div>
+
+    <!-- Script -->
+    <script src="https://kit.fontawesome.com/47ed96791a.js" crossorigin="anonymous"></script>
+    <script src="navbar.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

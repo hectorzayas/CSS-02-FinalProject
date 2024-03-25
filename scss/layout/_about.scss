@@ -1,0 +1,107 @@
+/* --- About Section --- */
+#about {
+    @extend %section;
+    height: 100vh;
+    background: none;
+
+    @include smartphone-horizontal {
+        padding-top: 15vh;
+
+        background: linear-gradient(
+            rgba($color: $background, $alpha: 0) 5%,
+            rgba($color: $background, $alpha: 0.3) 20%,
+            rgba($color: $background, $alpha: 0.6) 30%,
+            rgba($color: $background, $alpha: 0.8) 40%,
+            rgba($color: $background, $alpha: 1.0) 50%,
+            rgba($color: $background, $alpha: 1.0)
+        );
+    }
+
+    .about-container {
+        display: grid;
+        place-items: center;
+        height: 100%;
+        width: 100%;
+
+        h2 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            color: $nav-font-color;
+            filter: brightness(1.5);
+
+            @include tablet-horizontal {
+                margin-left: 5%;
+            }
+
+            @include tablet-vertical {
+                margin-left: 5%;
+            }
+        }
+
+        p {
+            width: 75ch;
+            font-size: clamp(1rem, 5vw, 1.5rem);
+            line-height: 1.8;
+
+            @include tablet-horizontal {
+                margin-left: 5%;
+                width: 90%;
+            }
+
+            @include tablet-vertical {
+                margin-left: 5%;
+                width: 90%;
+            }
+        }
+
+        .phrase {
+            color: darken($color: $primary-font-color, $amount: 20%);
+            transition-property: color;
+            transition-timing-function: ease;
+            transition: color 0.25s ease;
+
+            // Adjust number of spans in p
+            @for $i from 1 through 10 {
+                &:nth-child(#{$i}) {
+                    transition-delay: $i * 0.1s;
+                }
+            }
+
+            &.active {
+                color: lighten($color: $primary-font-color, $amount: 20%);
+            }
+
+            &.active .everest {
+                color: lighten($color: $primary-color, $amount: 20%);
+            }
+
+        }
+
+        background: linear-gradient(
+            rgba($color: $background, $alpha: 0) 5%,
+            rgba($color: $background, $alpha: 0.3) 20%,
+            rgba($color: $background, $alpha: 0.6) 30%,
+            rgba($color: $background, $alpha: 0.8) 40%,
+            rgba($color: $background, $alpha: 1.0) 50%,
+            rgba($color: $background, $alpha: 1.0)
+        );
+
+        backdrop-filter: blur(80px);
+        -webkit-backdrop-filter: blur(80px);
+        
+        mask-image: linear-gradient(
+            rgba($color: $background, $alpha: 0),
+            rgba($color: $background, $alpha: 0.5) 10%,
+            rgba($color: $background, $alpha: 0.8) 20%,
+            rgba($color: $background, $alpha: 1.0) 30%,
+            rgba($color: $background, $alpha: 1.0),
+        );
+
+        -webkit-mask-image: linear-gradient(
+            rgba($color: $background, $alpha: 0),
+            rgba($color: $background, $alpha: 0.5) 10%,
+            rgba($color: $background, $alpha: 0.8) 20%,
+            rgba($color: $background, $alpha: 1.0) 30%,
+            rgba($color: $background, $alpha: 1.0),
+        );
+    }
+}

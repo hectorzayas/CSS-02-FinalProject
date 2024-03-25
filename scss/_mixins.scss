@@ -1,0 +1,158 @@
+// Extends for common styles
+%section {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    background: $background;
+    color: $primary-font-color;
+}
+
+%full-screen-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+%article {
+    flex: 1;
+    margin: 0 15px;
+    background: $background-alt;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+%article-img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+%contact-input {
+    background: $input-bg;
+    border: none;
+    border-radius: 8px;
+    padding: 15px;
+    color: $nav-font-color;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+%navbar-setup {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 15px;
+    color: $nav-font-color;
+    position: sticky;
+    top: 0px;
+    z-index: 10;
+    height: 60px;
+}
+
+%logo {
+    h1 {
+        // Change this value on navbar.js file!
+        font-size: 2.5rem;
+        color: darken($nav-font-color, 20%);
+        font-weight: 800;
+
+        span {
+            color: lighten($nav-font-color, 10%);
+            font-weight: 1000;
+            margin: 0 5px;
+        }
+    }
+}
+
+// Mixin for common styles
+@mixin flex-center($direction: row) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+@mixin blog-title($font-size) {
+    font-size: $font-size;
+    color: $secondary-font-color;
+    margin: 15px 0;
+}
+
+@mixin mobile-gallery-container($padding-bottom) {
+    flex-direction: column;
+    height: auto;
+    top: 100px;
+    padding-bottom: $padding-bottom;
+}
+
+@mixin mobile-gallery-box($width) {
+    width: $width;
+    margin-right: unset;
+    margin: auto;
+    margin-bottom: 10px;
+    opacity: 1;
+    transform: scale(1);
+}
+
+// Media Queries
+@mixin tablet-horizontal-large {
+    // Target Ipad Pro
+    @media (max-width: 1367px) {
+        @content;
+    }
+}
+
+@mixin tablet-horizontal {
+    // Target Ipad Air
+    @media (orientation: landscape) and (max-width: 1181px) {
+        @content;
+    }
+}
+
+@mixin tablet-vertical {
+    // Target Ipad Pro
+    @media (orientation: portrait) and (max-width: 1025px) {
+        @content;
+    }
+}
+
+@mixin smartphone-horizontal {
+    // Target IPhone 12 Pro
+    @media (orientation: landscape) and (max-height: 450px) {
+        @content;
+    }
+}
+
+@mixin smartphone-vertical {
+    // Target IPhone 14 Pro Max
+    @media (max-width: 600px) {
+        @content;
+    }
+}
+
+@mixin smartphone-small {
+    // Target IPhone SE
+    @media (orientation: portrait) and (max-height: 700px) {
+        @content;
+    }
+}
+
+// Shared Animation
+.fadeInUp {
+    animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

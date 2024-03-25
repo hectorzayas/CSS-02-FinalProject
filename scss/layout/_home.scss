@@ -1,0 +1,102 @@
+/* --- Home Section --- */
+.video-container {
+    position: relative;
+    z-index: -1;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+
+    video, .noise {
+        @extend %full-screen-fixed;
+        object-fit: cover;
+        filter: blur(10px);
+    }
+
+    .noise {
+        filter: url('../../filters/noise.svg#noise');
+        pointer-events: none;
+        mix-blend-mode: overlay;
+    }
+}
+
+.overlay {
+    @extend %full-screen-fixed;
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    // justify-content: center;
+
+    display: grid;
+    place-items: center;
+    grid-row-gap: 100px;
+
+    @include smartphone-horizontal {
+        top: 40px;
+        grid-row-gap: 50px;
+    }
+
+    // h1 {
+    //     position: relative;
+    //     font-weight: 1000;
+    //     color: $primary-font-color;
+    //     font-size: clamp(3.5rem, 5vw, 6rem);
+    //     z-index: 10;
+    // }
+
+    .main-title-container {
+        position: relative;
+        place-self: end center;
+
+        h1 {
+            position: absolute;
+            color: transparent;
+            transform: translate(-50%, -50%);
+            font-weight: 1000;
+            font-size: clamp(8rem, 5vw, 1.25rem);
+            z-index: 10;
+
+            @include smartphone-vertical {
+                font-size: clamp(3.5rem, 5vw, 1.25rem);
+            }
+
+            @include smartphone-horizontal {
+                font-size: clamp(6rem, 5vw, 1.25rem);
+            }
+
+            &:nth-child(1) {
+                color: rgba($color: $nav-font-color, $alpha: .5);
+            }
+
+            &:nth-child(2) {
+                color: $nav-font-color;
+                animation: titleAnimation 4s ease-in-out infinite;
+            }
+        }
+
+        @keyframes titleAnimation {
+            0%, 100% {
+                clip-path: polygon(9% 56%, 14% 42%, 30% 51%, 33% 64%, 39% 50%, 50% 42%, 54% 54%, 66% 63%, 72% 46%, 82% 50%, 89% 41%, 96% 50%, 100% 61%, 100% 100%, 0% 100%, 0 65%);
+            }
+            50% {
+                clip-path: polygon(4% 46%, 9% 65%, 21% 55%, 30% 42%, 37% 55%, 47% 63%, 55% 53%, 64% 45%, 74% 58%, 81% 43%, 89% 55%, 97% 62%, 100% 51%, 100% 100%, 0% 100%, 0 61%);
+            }
+        }
+    }
+
+    .subtitle-container {
+        place-self: start center;
+
+        opacity: 0.75;
+
+        font-family: $font-stack-secondary;
+        letter-spacing: 5px;
+        font-style: italic;
+        font-weight: lighter;
+        color: $nav-font-color;
+        position: relative;
+        text-align: center;
+        font-size: clamp(1.5rem, 5vw, 1.25rem);
+        font-weight: 0;
+    }
+}
