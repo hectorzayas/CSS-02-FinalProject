@@ -13,7 +13,7 @@
     }
 
     .noise {
-        filter: url('../../filters/noise.svg#noise');
+        filter: url('../filters/noise.svg#noise');
         pointer-events: none;
         mix-blend-mode: overlay;
     }
