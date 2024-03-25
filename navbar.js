@@ -5,6 +5,10 @@ function checkScroll() {
     const logo = document.getElementById('logo');
     let scrollPosition = window.scrollY;
 
+    const video = document.querySelector('video');
+    const noise = document.getElementById('noise');
+    const home = document.getElementById('home');
+
     const logoFontSize = window.getComputedStyle(logo).fontSize;
   
 //  Add/Remove 'scrolled' class based on scroll position
@@ -12,6 +16,16 @@ function checkScroll() {
         navbar.classList.add('scrolled');
     } else {
         navbar.classList.remove('scrolled');
+    }
+
+    if (scrollPosition > 1950) {
+        video.classList.add('hide-video');
+        noise.classList.add('hide-video');
+        home.classList.add('darkBackground');
+    } else {
+        video.classList.remove('hide-video');
+        noise.classList.remove('hide-video');
+        home.classList.remove('darkBackground');
     }
 
     // Calculate new font size based on scroll position

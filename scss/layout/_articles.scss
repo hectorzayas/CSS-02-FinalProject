@@ -13,17 +13,36 @@ article {
     .text-content {
         width: 75ch;
         margin: auto 20px;
+
+        @include smartphone-vertical {
+            width: 32.5ch;
+        }
+
+        @include smartphone-small {
+            width: 30ch;
+        }
+
+        @include smartphone-horizontal {
+            width: 60ch;
+        }
     }
     
     h1 {
         font-size: 2.5rem;
         color: $nav-font-color;
         margin: 20px 0;
+
+        @include smartphone-vertical {
+            font-size: 1.75rem;
+        }
+
+        @include smartphone-small {
+            font-size: 1.5rem;
+        }
     }
 
     h2 {
         color: $secondary-font-color;
-        margin-bottom: 20px;
     }
     
     p {

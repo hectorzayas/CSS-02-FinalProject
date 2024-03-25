@@ -1,4 +1,8 @@
 /* --- Home Section --- */
+.darkBackground {
+    background-color: $background-alt;
+}
+
 .video-container {
     position: relative;
     z-index: -1;
@@ -10,12 +14,20 @@
         @extend %full-screen-fixed;
         object-fit: cover;
         filter: blur(10px);
+        
+        &.hide-video {
+            display: none;
+        }
     }
 
     .noise {
         filter: url('../filters/noise.svg#noise');
         pointer-events: none;
         mix-blend-mode: overlay;
+
+        &.hide-video {
+            display: none;
+        }
     }
 }
 

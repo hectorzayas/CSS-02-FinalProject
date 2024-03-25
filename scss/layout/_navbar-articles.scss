@@ -20,6 +20,11 @@
         justify-content: center;
         width: 10%;
         font-size: 1.5rem;
+
+        @include smartphone-vertical {
+            width: 20%;
+        }
+
         a {
             color: $primary-color;
             font-weight: 800;
