@@ -1,5 +1,7 @@
 # The Himalayas
 
+![](https://github.com/hectorzayas/CSS-02-FinalProject/blob/master/TheHimalayas-min.gif)
+
 ## Overview:
 The Himalayas is a web project that showcases the beauty and majesty of the Himalayan mountain range. It features a variety of articles and stunning visuals. This project was inspired by and follows the coding practices of [Jacinto Wong](https://github.com/JacintoDesign/).
 
